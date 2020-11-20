@@ -17,7 +17,12 @@ let package = Package(
     )
   ],
   targets: [
-    .target(name: "CombineSchedulers"),
+    .target(
+      name: "CombineSchedulers",
+      swiftSettings: [
+        .define("BUILD_LIBRARY_FOR_DISTRIBUTION"),
+      ]
+    ),
     .testTarget(
       name: "CombineSchedulersTests",
       dependencies: ["CombineSchedulers"]
