@@ -20,6 +20,7 @@ let package = Package(
     .target(
       name: "CombineSchedulers",
       swiftSettings: [
+        .define("SWIFT_ENABLE_LIBRARY_EVOLUTION"),
         .define("BUILD_LIBRARY_FOR_DISTRIBUTION"),
       ]
     ),
